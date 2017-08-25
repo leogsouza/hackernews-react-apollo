@@ -1,3 +1,17 @@
 {
-    "extends": "react-app"
+    "extends":[
+        "plugin:react/recommended",
+        "react-app"
+    ],
+    "env": {
+        "browser": true
+    },
+    "plugins": [
+        "react"
+    ],
+    "parser": "babel-eslint",
+    "globals": {
+        "fetch": true,
+        "URL": false
+    }
 }

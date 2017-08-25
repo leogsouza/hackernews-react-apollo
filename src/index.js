@@ -1,21 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/index.css';
-import App from './components/App';
-import registerServiceWorker from './registerServiceWorker';
-import { ApolloProvider, createNetworkInterface, ApolloClient } from 'react-apollo'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './styles/index.css'
+import App from './components/App'
+import registerServiceWorker from './registerServiceWorker'
+import {
+  ApolloProvider,
+  createNetworkInterface,
+  ApolloClient
+} from 'react-apollo'
 
 const networkInterface = createNetworkInterface({
-    uri: '__SIMPLE_API_ENDPOINT'
+  uri: '__SIMPLE_API_ENDPOINT'
 })
 
 const client = new ApolloClient({
-    networkInterface
+  networkInterface
 })
 
 ReactDOM.render(
-    <ApolloProvider client={client}>
-        <App />
-    </ApolloProvider>
-    , document.getElementById('root'));
-registerServiceWorker();
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+  document.getElementById('root')
+)
+registerServiceWorker()
