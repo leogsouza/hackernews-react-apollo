@@ -10,7 +10,7 @@ import {
 } from 'react-apollo'
 
 const networkInterface = createNetworkInterface({
-  uri: '__SIMPLE_API_ENDPOINT'
+  uri: 'https://api.graph.cool/simple/v1/cj6s1iuwk0c7w0196flu35rbj'
 })
 
 const client = new ApolloClient({
